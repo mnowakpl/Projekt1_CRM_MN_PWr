@@ -32,9 +32,9 @@ namespace Projekt1_CRM_MN_PWr
             {
                 case "1": OsobyMenu();
                     break;
-                case "2": ProduktywnoscMenu();
+                case "2": DepartMenu();
                     break;
-                case "3": DepartMenu();
+                case "3": ProduktywnoscMenu();
                     break;
                 case "4": Instrukcja(); 
                     break;
@@ -71,8 +71,7 @@ namespace Projekt1_CRM_MN_PWr
             Console.WriteLine("\r\n\tDostępne działania:");
             Console.WriteLine("\t\t A.\t Wyszukaj dane pracownika");
             Console.WriteLine("\t\t B.\t Dodaj dane");
-            Console.WriteLine("\t\t C.\t Usuń dane");
-            Console.WriteLine("\t\t D.\t INSTRUKCJA");
+            Console.WriteLine("\t\t C.\t INSTRUKCJA");
             Console.WriteLine("\t\t X.\t Powrót do MENU");
             Console.Write("\r\nWybierz odpowiednią opcję:");
 
@@ -82,9 +81,7 @@ namespace Projekt1_CRM_MN_PWr
                     break;
                 case "B": wyniki.Dodaj();
                     break;
-                case "C": wyniki.Usun();
-                    break;
-                case "D": Instrukcja();
+                case "C": Instrukcja();
                     break;
                 case "X": StartMenu();
                     break;
@@ -94,22 +91,16 @@ namespace Projekt1_CRM_MN_PWr
         {
             Console.WriteLine("\r\n----------------------------------");
             Console.WriteLine("\r\n\tDostępne działania:");
-            Console.WriteLine("\t\t A.\t Wyszukaj dane pracownika");
-            Console.WriteLine("\t\t B.\t Dodaj dane");
-            Console.WriteLine("\t\t C.\t Usuń dane");
-            Console.WriteLine("\t\t D.\t INSTRUKCJA");
+            Console.WriteLine("\t\t A.\t Dane departamentu");
+            Console.WriteLine("\t\t B.\t INSTRUKCJA");
             Console.WriteLine("\t\t X.\t Powrót do MENU");
             Console.Write("\r\nWybierz odpowiednią opcję:");
 
             switch (Console.ReadLine())
             {
-                case "A": wyniki.Wyszukaj();
+                case "A": depart.Dane();
                     break;
-                case "B": wyniki.Dodaj();
-                    break;
-                case "C": wyniki.Usun();
-                    break;
-                case "D": Instrukcja();
+                case "B": Instrukcja();
                     break;
                 case "X": StartMenu();
                     break;
@@ -124,10 +115,8 @@ namespace Projekt1_CRM_MN_PWr
                               "\r\n\tZakładka 'PRACOWNICY FIRMY' pozwala zarządzać bazą danych osób pracujących w firmie, " +
                               "\r\n\tpoprzez dodawanie lub usuwanie osób, a także łatwy dostęp do wszystkich danych " +
                               "\r\n\tpracownika poprzez jego kod identyfikacyjny." +
-                              "\r\n\tZakładka 'PRODUKTYWNOŚĆ' pozwala kontrolować wyniki pracy każdego pracownika" +
-                              "\r\n\tpo podaniu jego kodu identyfikacyjnego." +
-                              "\r\n\tZakładka 'ANALIZA DANYCH' pozwala dokonać podstawowej analizy ekonomicznej departamentów," +
-                              "\r\n\tna podstawie zbioru danych dostępnych w bazie." +
+                              "\r\n\tZakładka 'ANALIZA WYNIKÓW' pozwala podsumować wyniki pracy każdego pracownika" +
+                              "\r\n\tZakładka 'DEPARTAMENTY' przedstawia podstawowe dane o poszczególnych deparamentach," +
                               "\r\n\t " +
                               "\r\n\tAplikacja operuje na bazach i zbiorach danych zawartych w plikach *.txt" +
                               "\r\n\tznajdujących się w folderze CRC znajdującym się w dokumentach komputera.");
